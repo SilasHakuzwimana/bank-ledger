@@ -32,7 +32,6 @@ bank-ledger/
 └── README.md
 ```
 
-
 ## How to Build and Test
 
 ```bash
@@ -52,17 +51,19 @@ mvn package
 ```bash
 mvn compile exec:java -Dexec.mainClass="Main"
 ```
+
 Or run Main.java directly from your IDE.
 
 ## Test Coverage
 
 The AccountTest class covers:
 
-Test	Scenario
-testCheckingAccountDeposit	Successful deposit
-testCheckingAccountWithdrawSuccess	Successful withdraw
-testWithdrawExactlyBalance	Withdraw full balance (boundary)
-testDepositNegativeAmount	Reject negative deposit
-testSavingNegativeAmount	Reject negative savings deposit
-testSavingZeroAmount	Reject zero deposit
-testWithdrawingMoreAmount	Reject overdraft
+| Test                                 | Scenario                         |
+| ------------------------------------ | -------------------------------- |
+| `testCheckingAccountDeposit`         | Successful deposit               |
+| `testCheckingAccountWithdrawSuccess` | Successful withdraw              |
+| `testWithdrawExactlyBalance`         | Withdraw full balance (boundary) |
+| `testDepositNegativeAmount`          | Reject negative deposit          |
+| `testSavingNegativeAmount`           | Reject negative savings deposit  |
+| `testSavingZeroAmount`               | Reject zero deposit              |
+| `testWithdrawingMoreAmount`          | Reject overdraft                 |
