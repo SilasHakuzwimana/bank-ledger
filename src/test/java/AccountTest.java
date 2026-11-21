@@ -1,13 +1,19 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
 public class AccountTest {
+    private Displayer mockDisplayer;
 
     // Create a Mockito instead of manual class
-    Displayer mockDisplayer = mock(Displayer.class);
+    @BeforeEach
+    @SuppressWarnings("unused")
+    void setUp() {
+        mockDisplayer = mock(Displayer.class);
+    }
 
     @Test
     public void testCheckingAccountDeposit() {
